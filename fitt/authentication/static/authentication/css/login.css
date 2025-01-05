@@ -1,0 +1,56 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.center {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__container {
+    border: 1px solid black;
+    background-color: white;
+    width: 30%;
+    height: 40%;
+    padding: 2rem;
+}
+
+.login__form {
+    position: relative;
+    height: 100%;
+}
+
+.login__header {
+    padding-bottom: 3rem;
+}
+
+.login__form_container {
+    padding-bottom: 1rem;
+}
+
+.login__input_container {
+    padding-bottom: 1rem;
+}
+
+.login__input {
+    width: 100%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.login__button_container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.right {
+    position: relative;
+    float: right;
+}

@@ -6,14 +6,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'authentication/css/login.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/authentication/css/login.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/global/css/utils.css' %}">
     <title>Login - FITT</title>
 </head>
 
 <body>
-    <form>
-        <!-- Build login form -->
-    </form>
+    <div class="center">
+        <div class="login__container">
+            <form class="login__form">
+                <h1 class="login__header">Login</h1>
+                <div>
+                    <div class="login__form_container">
+                        <div class="login__input_container">
+                            <label for="username">Username</label>
+                            <input class="login__input" type="text" placeholder="Enter Username" name="username"
+                                required>
+                        </div>
+
+                        <div class="login__input_container">
+                            <label for="passowrd">Password</label>
+                            <input class="login__input" type="password" placeholder="Enter Password" name="password"
+                                required>
+                        </div>
+                        <button type="submit">Login</button>
+                        <a class="right" href="#">Forgot password?</a>
+                    </div>
+                </div>
+
+                <div class="login__button_container">
+                    <a class="right" href="#">Create an account</a>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
