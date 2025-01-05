@@ -6,11 +6,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static '/authentication/css/signup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/global/css/utils.css' %}">
     <title>Sign Up - FITT</title>
 </head>
 
 <body>
+    <div class="center">
+        <div class="signup__container">
+            <form class="signup__form">
+                <h1 class="signup__header">Sign Up</h1>
+                <div class="signup__form_container">
+                    <div class="signup__input_container">
+                        <label for="username">Username</label>
+                        <input class="signup__input" type="text" placeholder="Enter Username" name="username" required>
+                    </div>
 
+                    <div class="signup__input_container">
+                        <label for="passowrd">Password</label>
+                        <input class="signup__input" type="password" placeholder="Enter Password" name="password"
+                            required>
+                    </div>
+
+                    <div class="signup__input_container">
+                        <label for="passowrd">Re-Enter Password</label>
+                        <input class="signup__input" type="password" placeholder="Re-Enter Password" name="password"
+                            required>
+                    </div>
+
+                    <button type="submit">Sign Up</button>
+                    <a class="right" href="#">Forgot password?</a>
+                </div>
+                <div class="signup__button_container">
+                    <a class="right" href="/login">Already a member?</a>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

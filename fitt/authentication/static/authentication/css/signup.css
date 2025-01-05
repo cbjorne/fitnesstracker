@@ -13,7 +13,7 @@ body {
     align-items: center;
 }
 
-.login__container {
+.signup__container {
     border: 1px solid black;
     background-color: white;
     width: 30%;
@@ -23,30 +23,30 @@ body {
     border-radius: 1em;
 }
 
-.login__form {
+.signup__form {
     position: relative;
     height: 100%;
 }
 
-.login__header {
-    padding-bottom: 5rem;
+.signup__header {
+    padding-bottom: 3rem;
 }
 
-.login__form_container {
+.signup__form_container {
     padding-bottom: 1rem;
 }
 
-.login__input_container {
+.signup__input_container {
     padding-bottom: 1rem;
 }
 
-.login__input {
+.signup__input {
     width: 100%;
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
 
-.login__button_container {
+.signup__button_container {
     position: absolute;
     bottom: 0;
     width: 100%;
