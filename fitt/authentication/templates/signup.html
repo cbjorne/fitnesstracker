@@ -17,10 +17,32 @@
             <form action="/signup/" method="post" class="signup__form">
                 {% csrf_token %}
                 <h1 class="signup__header">Sign Up</h1>
+                {% for message in messages %}
+
+                <div class="signup__error_container">
+                    <p class="signup__error">{{ message }}</p>
+                </div>
+
+                {% endfor %}
                 <div class="signup__form_container">
+                    <div class="signup__name_container">
+                        <div class="signup__input_container">
+                            <label for="firstname">First Name</label>
+                            {{ form.firstname }}
+                        </div>
+                        <div class="signup__input_container">
+                            <label for="lastname">Last Name</label>
+                            {{ form.lastname }}
+                        </div>
+                    </div>
                     <div class="signup__input_container">
                         <label for="username">Username</label>
                         {{ form.username }}
+                    </div>
+
+                    <div class="signup__input_container">
+                        <label for="email">Email</label>
+                        {{ form.email }}
                     </div>
 
                     <div class="signup__input_container">
@@ -33,8 +55,7 @@
                         {{ form.confirmpassword }}
                     </div>
 
-                    <button type="submit">Sign Up</button>
-                    <a class="right" href="#">Forgot password?</a>
+                    <button class="btn right" type="submit">Sign Up</button>
                 </div>
                 <div class="signup__button_container">
                     <a class="right" href="/login">Already a member?</a>
