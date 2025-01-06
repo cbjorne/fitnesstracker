@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
-from django.core.exceptions import ValidationError
 from django.contrib import messages
 
 from .forms import LoginForm, SignupForm
