@@ -16,8 +16,6 @@ def signup(request):
         if form.is_valid():
             return HttpResponseRedirect('/thanks/')
         else:
-            print(request)
-            print(form.errors.as_json())
             for error in form.errors.as_data()['__all__']:
                 messages.error(request, error.message)
             return render(request, 'signup.html', { 'form': form })
