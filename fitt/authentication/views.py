@@ -13,7 +13,7 @@ def signup(request):
         form = SignupForm(request.POST)
 
         if form.is_valid():
-            return HttpResponseRedirect('/thanks/')
+            return HttpResponseRedirect('/home/')
         else:
             for error in form.errors.as_data()['__all__']:
                 messages.error(request, error.message)
@@ -29,7 +29,7 @@ def login(request):
         form = LoginForm(request.POST)
 
         if form.is_valid():
-            return HttpResponseRedirect('/thanks/')
+            return HttpResponseRedirect('/home/')
     
     else:
         form = LoginForm()
