@@ -48,7 +48,25 @@ html {
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    border: 1px solid red;
 }
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.25s;
+}
+
+a:hover {}
 
 @media (min-width: 475px) {
     .container {

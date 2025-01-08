@@ -1,0 +1,38 @@
+.nav__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 100;
+}
+
+.nav__title {
+    color: black;
+    font-weight: 600;
+    letter-spacing: 0.5em;
+    transition: color 0.25s;
+}
+
+.nav__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 1em;
+}
+
+.nav__username {
+    color: black;
+}
+
+.nav__bars {
+    display: none;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.nav__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: black;
+}
