@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static '/authentication/css/signup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/global/css/utils.css' %}">
+    <title>Sign Up - FITT</title>
+</head>
+
+<body id="root">
+    <div class="center">
+        <div class="signup__container">
+            <form method="post" action="/authenticate/signup/" class="signup__form">
+                {% csrf_token %}
+                <h1 class="signup__header">Sign Up</h1>
+                {% for message in messages %}
+
+                <div class="signup__error_container">
+                    <p class="signup__error">{{ message }}</p>
+                </div>
+
+                {% endfor %}
+                <div class="signup__form_container">
+                    <div class="signup__name_container">
+                        <div class="signup__input_container">
+                            <label class="signup__label" for="first_name">First Name</label>
+                            <input class="signup__input" id="{{ form.first_name.id_for_label}}"
+                                name="{{ form.first_name.html_name }}" placeholder="Enter First Name" type="text"
+                                required>
+                        </div>
+                        <div class="signup__input_container">
+                            <label class="signup__label" for="last_name">Last Name</label>
+                            <input class="signup__input" id="{{ form.last_name.id_for_label}}"
+                                name="{{ form.last_name.html_name }}" placeholder="Enter Last Name" type="text"
+                                required>
+                        </div>
+                    </div>
+                    <div class="signup__input_container">
+                        <label class="signup__label" for="username">Username</label>
+                        <input class="signup__input" id="{{ form.username.id_for_label }}"
+                            name="{{ form.username.html_name }}" placeholder="Enter Username" type="text" required>
+                    </div>
+
+                    <div class="signup__input_container">
+                        <label class="signup__label" for="email">Email</label>
+                        <input class="signup__input" id="{{ form.email.id_for_label }}"
+                            name="{{ form.email.html_name }}" placeholder="Enter Email" type="email" required>
+                    </div>
+
+                    <div class="signup__input_container">
+                        <label class="signup__label" for="password1">Password</label>
+                        <input class="signup__input" id="{{ form.password1.id_for_label }}"
+                            name="{{ form.password1.html_name }}" placeholder="Enter Password" type="password" required>
+                    </div>
+
+                    <div class="signup__input_container">
+                        <label class="signup__label" for="password2">Re-Enter Password</label>
+                        <input class="signup__input" id="{{ form.password2.id_for_label }}"
+                            name="{{ form.password2.html_name }}" placeholder="Confirm Password" type="password"
+                            required>
+                    </div>
+
+                    <button class="btn right signup__button" type="submit">Sign Up</button>
+                </div>
+                <div class="signup__button_container">
+                    <a class="right signup__login" href="/login">Already a member?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

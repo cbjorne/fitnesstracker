@@ -1,37 +1,21 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponseRedirect
-from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate, login
+from .forms import signup_form
 
-from .forms import LoginForm, SignupForm
-
-def authenticate(request):
-    return redirect('/login')
-
-def signup(request):
-    print(request.POST)
+def signup_view(request):
     if request.method == 'POST':
-        form = SignupForm(request.POST)
+        form = signup_form(request.POST)
+
 
         if form.is_valid():
-            return HttpResponseRedirect('/home/')
-        else:
-            for error in form.errors.as_data()['__all__']:
-                messages.error(request, error.message)
-            return render(request, 'signup.html', { 'form': form })
-    else:
-        form = SignupForm()
-        
-    return render(request, 'signup.html', { 'form': form })
+            form.save()
 
-def login(request):
-    print(request.POST)
-    if request.method == 'POST':
-        form = LoginForm(request.POST)
+            user = authenticate(username=form.cleaned_data['username'], password=form.cleaned_data['password1'])
 
-        if form.is_valid():
-            return HttpResponseRedirect('/home/')
-    
+            login(request, user)
+            return redirect('home')
     else:
-        form = LoginForm()
+        form = signup_form()
     
-    return render(request, 'login.html', { 'form': form })
+    return render(request, 'registration/signup.html', { 'form': form })

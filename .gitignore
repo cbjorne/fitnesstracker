@@ -1,0 +1,11 @@
+.venv
+.env
+env/
+venv/
+
+*.log
+__pycache__
+db.sqlite3
+
+fitt/fitt/settings.py
+assets/

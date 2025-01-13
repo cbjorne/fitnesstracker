@@ -14,13 +14,12 @@ body {
 }
 
 .login__container {
-    border: 1px solid black;
-    background-color: white;
-    width: 30%;
-    height: 40%;
     padding: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 1em;
+    width: 70%;
+    height: 50%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 7px;
+    background-color: var(--clr-light);
 }
 
 .login__form {
@@ -29,21 +28,33 @@ body {
 }
 
 .login__header {
-    padding-bottom: 5rem;
+    color: var(--clr-dark);
+    font-size: var(--size-3xl);
+    padding-bottom: 4rem;
 }
 
 .login__form_container {
-    padding-bottom: 1rem;
+    padding-bottom: 10rem;
 }
 
 .login__input_container {
     padding-bottom: 1rem;
 }
 
+.login__label {
+    color: var(--clr-dark);
+    font-size: var(--size-base);
+}
+
 .login__input {
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    font-size: var(--size-sm);
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid var(--clr-fadedlight);
     box-sizing: border-box;
+    border-radius: .5em;
+    padding-left: .25em;
 }
 
 .login__button_container {
@@ -52,7 +63,66 @@ body {
     width: 100%;
 }
 
+.login__forgot_password {
+    font-size: var(--size-sm);
+}
+
+.login__signup {
+    font-size: var(--size-sm);
+}
+
+.btn {
+    font-size: var(--size-xs);
+}
+
 .right {
     position: relative;
     float: right;
+}
+
+
+/* @media (min-width: 475px) {} */
+
+@media (min-width: 640px) {
+    .login__container {
+        max-width: 448px;
+        max-height: 400px;
+    }
+}
+
+/* @media (min-width: 768px) {} */
+
+/* @media (min-width: 1024px) {} */
+
+/* @media (min-width: 1280px) {} */
+
+/* @media (min-width: 1536px) {} */
+@media (max-height: 750px) {
+    .login__container {
+        height: 70%;
+    }
+
+    .login__header {
+        font-size: var(--size-xl);
+    }
+
+    .login__input_container {
+        padding-bottom: .2rem;
+    }
+
+    .login__label {
+        font-size: var(--size-sm);
+    }
+
+    .login__input {
+        font-size: var(--size-xs);
+    }
+
+    .login__forgot_password {
+        font-size: var(--size-sm);
+    }
+
+    .login__signup {
+        font-size: var(--size-sm);
+    }
 }

@@ -11,30 +11,32 @@
     <title>Login - FITT</title>
 </head>
 
-<body>
+<body id="root">
     <div class="center">
         <div class="login__container">
-            <form action="/login/" method="post" class="login__form">
+            <form method="post" class="login__form">
                 {% csrf_token %}
                 <h1 class="login__header">Login</h1>
                 <div class="login__form_container">
 
                     <div class="login__input_container">
-                        <label for="username">Username</label>
-                        {{ form.username }}
+                        <label class="login__label" for="username">Username</label>
+                        <input class="login__input" id="{{ form.username.id_for_label }}"
+                            name="{{ form.username.html_name }}" maxlength="20" type="text" placeholder="Enter Username"
+                            required>
                     </div>
 
                     <div class="login__input_container">
-                        <label for="password">Password</label>
-                        {{ form.password }}
+                        <label class="login__label" for="password">Password</label>
+                        <input class="login__input" id="{{ form.password.id_for_label }}"
+                            name="{{ form.password.html_name }}" type="password" placeholder="Enter Password" required>
                     </div>
 
                     <button class="btn right" type="submit">Login</button>
-
                 </div>
                 <div class="login__button_container">
-                    <a href="#">Forgot password?</a>
-                    <a class="right" href="/signup">Create an account</a>
+                    <a class="login__forgot_password" href="#">Forgot password?</a>
+                    <a class="login__signup right" href="/authenticate/signup">Create an account</a>
                 </div>
             </form>
         </div>
