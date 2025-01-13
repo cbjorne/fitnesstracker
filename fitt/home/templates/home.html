@@ -1,12 +1,10 @@
-{% extends 'base.html' %}
+{% extends 'home_base.html' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Home - FITT{% endblock %}
 
-{% block content %}
-{% if user.is_authenticated %}
+{% block username %}
 {{ user.username }}
-{% else %}
-<p>you are not logged in</p>
-<a href="{% url 'authenticate/login'}">Log In</a>
-{% endif %}
+{% endblock %}
+
+{% block content%}
 {% endblock %}

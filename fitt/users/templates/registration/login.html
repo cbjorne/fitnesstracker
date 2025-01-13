@@ -1,17 +1,7 @@
-{% load static %}
-<!DOCTYPE html>
+{% extends 'user_base.html' %}
 
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static '/authentication/css/login.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static '/global/css/utils.css' %}">
-    <title>Login - FITT</title>
-</head>
-
-<body id="root">
+{% block title%}Login - FITT{% endblock %}
+{% block content %}
     <div class="center">
         <div class="login__container">
             <form method="post" class="login__form">
@@ -36,11 +26,9 @@
                 </div>
                 <div class="login__button_container">
                     <a class="login__forgot_password" href="#">Forgot password?</a>
-                    <a class="login__signup right" href="/authenticate/signup">Create an account</a>
+                    <a class="login__signup right" href="/users/signup">Create an account</a>
                 </div>
             </form>
         </div>
     </div>
-</body>
-
-</html>
+{% endblock %}

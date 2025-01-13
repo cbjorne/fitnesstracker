@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static '/users/css/login.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/users/css/signup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/global/css/utils.css' %}">
+    <title>{% block title %}FITT{% endblock %}</title>
+</head>
+
+<body id="root">
+    {% block content %}
+    {% endblock%}
+</body>
+</html>
