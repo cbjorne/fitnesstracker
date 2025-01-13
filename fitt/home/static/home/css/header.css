@@ -4,12 +4,15 @@
     align-items: center;
     padding: 1rem;
     z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 7px;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .nav__title {
-    color: black;
+    color: var(--clr-dark);
+    font-size: var(--size-2xl);
     font-weight: 600;
-    letter-spacing: 0.5em;
     transition: color 0.25s;
 }
 
@@ -22,17 +25,18 @@
 }
 
 .nav__username {
-    color: black;
+    font-size: var(--size-lg);
+    color: var(--clr-dark);
 }
 
 .nav__bars {
     display: none;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: var(--size-lg);
+    height: var(--size-lg);
 }
 
 .nav__icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    color: black;
+    width: var(--size-3xl);
+    height: var(--size-3xl);
+    color: var(--clr-dark);
 }
